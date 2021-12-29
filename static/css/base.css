@@ -3,11 +3,12 @@ html {
 }
 
 body {
-    background: url('/media/teapeople.jpg') no-repeat center center fixed;
+    
     background-size: cover;
     height: calc(100vh - 164px);
     color: rgb(241, 132, 227);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
+    background-color: black;
 }
 
 /* from Bulma */
@@ -25,7 +26,8 @@ body {
 }
 
 .logo-font {
-    font-family: 'Lobster', cursive;
+    
+    font-family: 'Permanent Marker', cursive;
     color: rgb(241, 132, 227);
 }
 
@@ -40,7 +42,7 @@ body {
 }
 
 .btn-black {
-    background: black;
+    background: rgb(241, 132, 227);
     color: white;
 }
 
@@ -50,17 +52,20 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: black;
+    color: rgb(241, 132, 227);
 }
 
 .text-black {
-    color: rgb(241, 132, 227);
+    color: #222;
 }
 
 .border-black {
     border: 1px solid black;
 }
+
+
+
 
 /* -------------------------------- Media Queries */
 
