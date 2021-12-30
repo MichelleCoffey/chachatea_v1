@@ -41,17 +41,14 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: rgb(241, 132, 227);
-    color: white;
-}
+
 
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn:hover,
+.btn:active,
+.btn:focus {
     background: black;
     color: rgb(241, 132, 227);
 }
@@ -63,6 +60,11 @@ body {
 .border-black {
     border: 1px solid black;
 }
+
+.dropdown-item {
+    color: rgb(241, 132, 227);
+}
+
 
 
 
