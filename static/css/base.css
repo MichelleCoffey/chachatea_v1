@@ -51,6 +51,11 @@ body {
 	z-index: -1;
 }
 
+.card-img-top {
+    height: 214px;
+    width: 200px;
+}
+
 
 
 .shop-now-button:hover,
