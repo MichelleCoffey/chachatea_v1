@@ -1,108 +1,357 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Tea People**
+[View a live version of Tea People here]()
+This is the main website for *Tea People*. An. eccommerce site selling tea and tea tasting. 
+![Tea People on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Tea People on multiple displays"
 
-Welcome MichelleCoffey,
+## Table of Contents
+### [User Experience](#user-experience-(ux))
+### [Project Goals](#project-goals)
+#### [User Stories](#user-stories)
+* [First Time Visitor Goals](#first-time-visitor-goals)
+* [Returning Visitor Goals](#returning-visitor-goals)
+* [Frequent Visitor Goals](#frequent-visitor-goals)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### [Design](#design)
 
-`python3 -m http.server`
+* [Color Scheme](#color-scheme)
+* [Typography](#typography)
+* [Imagery](#imagery)
+* [Features](#features)
+* [Defensive Design](#Defensive_Design)
+* [Wireframes](#wireframes)
+### [Technologies Used](#technologies-used)
+* [Languages Used](#languages-used)
+* [Frameworks  Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+### [Deployment](#delpoyment)
+* [GitHub](#github)
+* [Cloning to Local Device](#cloning-of-repository-to-a-local-device)
+* [Setting up a google maps javascript API](#Setting-up-a-google-maps-javascript-API)
 
-A blue button should appear to click: _Make Public_,
+### [Testing](#testing)
+### [User Stories] (#)
+[Photo story for first time user](#photo-story-for-first-time-user)
+[Bugs](#bugs)
+- [Gallery](#gallery)
+- [Navbar](#navbar)
+- [form](#form)
+- [Javascript for Maps](#javascript-for-maps)
+- [Javascript for mail](#javascript-for-mail)
+### [Acknowledgements](#acknowledgements)
+* [Media](#media)
+* [Individuals](#individuals)
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## User Experience (UX)
 
-A blue button should appear to click: _Make Public_,
+### Project Goals 
 
-Another blue button should appear to click: _Open Browser_.
+ * A website that allows user full CRUD(Create, Read/Locate , Update and Delete) functionality. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+ * Site will use HTML, CSS, jQuery, Python, Flask and MongoDB.
 
-To log into the Heroku toolbelt CLI:
+ * Website will provide Users the chance to login, create and edit website. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+ * A user friendly website.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+ 
 
-------
+#### First Time Visitor Goals
+ 
+ 1. A first time user will be able to visit the site on any device. 
+ 
+ 2. A first time user will register their account.
+ 
+ 3. After registering their account the can then add a recipe, edit a recipe and search for recipes using ingredients. 
 
-## Release History
+ #### Returning Visitor Goals
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ 1. Will be able to login to their account. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+ 2. They can also search for new recipes, add new recipes and edit old recipes. 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+ #### Frequent Visitor Goals.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+ 1. Learn new recipes.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+ 2. Continue to add to their recipe book. 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+ 3. Double check recipes when making dinner on your mobile. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+# Design 
+  ## Color Scheme  
+  * Three main colors where chosen. Black backgrouund on landing page. and White background, black font like a notebook and teal buttons. 
+  
+  * Red button for deletion warning.
+   
+ ## Typography 
+    
+  * Font used is Permanent Marker and Cursive for logo and Lato for the main body.  Permanent Marker is a nod to. thee Neon sign on the landing page.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+ ## Imagery
+  * Images used were from Unsplash.
+  
+## Features
+* Responsive on all devices. Allows users to work shop for tea online.  Allowing Icons that link to further social media updates.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Defensive Design
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* The user must log in or register to see the full recipes. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* Passwords are used with WerkZeug to protect the user. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* You can only add, edit and delete your own recipes. 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+* The passsword must contain between 5-20 characters. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+* Recipes must also contain characters. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+* Image Url must contain http:// or https://.
 
-------
 
-## FAQ about the uptime script
+## Database Schema 
 
-**Why have you added this script?**
+![successful validation confirmation](static/testing/schema.png) "Sample of Schema for database."
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+## Wireframes
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* Wireframe for the whole project. [View]()
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+# Technologies Used 
+## Languages Used 
+* HTML
+* CSS
+* Jquery
+* Python
+## Frameworks Libraries and Programs Used 
+1. [Materializecss](https://materializecss.com/)
+  
+    Materialize CSS
 
-**So….?**
+2. [Heroku](https://dashboard.heroku.com/apps)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    Used to deploy app. 
 
-**Can I opt out?**
+3. [MongoDB](https://account.mongodb.com/account/login?signedOut=true)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+    Database usedto store recipes and site info.  
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+4. [Google Fonts](https://fonts.google.com/specimen/Pacifico?preview.text=Pacifico&preview.text_type=custom&query=Pacifico)
 
-**Anything more?**
+    Pacifico font used.
+5. [Fontawesome](https://fontawesome.com/)
+    Fontawesome was used for to get icons for utensils and aa cocktail on the feast page. 
+6. [Gitpod](https://gitpod.io/workspaces/)
+    Used gitpod to work on my repositories. 
+7. [Github](https://github.com/MichelleCoffey/A_Moveable_Feast_Shanghai/tree/1a91746d21707106faef91c699500aff9414e097)
+     GitHub is hosting my repositories. 
+8. JQuery: 
+    * Used for materialize
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+9. [Balsamiq](https://balsamiq.com/)
+    * Balsamiq was used to design and organise my WireFrames. 
+10. [TinyPNG](https://tinypng.com/)
+     * Tinypng for fomatting images, so they loaded faster.
+11. [Unsplash](https://unsplash.com/)
+    * Upsplash was used to access some stock images to add to the site and in particular the hero image and background image. 
+12. [Shutterstock](https://www.shutterstock.com/)
+    * Shutterstock was used for the heroimage. 
+13. [BBC FOOD](https://www.bbc.co.uk/food)
+    * Recipes.
 
----
+14. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
 
-Happy coding!
+    Used for security and passwords. 
+
+15. [RandomKeyGen](https://randomkeygen.com/)
+
+
+## Deployment 
+### Github
+
+### Requirements 
+  1. Python3 
+  2. Github account
+  3. Mongo db account
+  4. Flask 
+  5. heroku account
+
+
+#### The repository is hosted on GitHub but deployed on Heroku
+To make a local clone on Github, follow the following steps.
+
+1. Log in to GitHub and go to the repository.
+2. Click on the green button with the text “Code”.
+3. Click on “Open with GitHub Desktop” and follow the prompts in the GitHub Desktop Application for instructions.     
+4. For further options and documentation please click [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
+  
+#### Working with the local copy.
+  1. Install all of the requirements. In the terminal window of your IDE type
+
+     **pip3 install -r requirements.txt**
+
+  2. Create a databae in Mongo db. 
+      * Sign up or login. 
+      * Create a cluster and a database. 
+      * Create cluster for family_recipes and in it create a further three collections: user, categories, and recipes. Add string values for each. 
+  3. Create the variables. 
+    * Create a env.py file by typing **touch env.py**
+    * Create a gitignore file and add the env.py to the gitignore to ensure that any passwords are not visible in the github repository. 
+    * Add environment variables in the env.py
+
+            
+              os.environ.setdefault("IP", "Added by developer")
+              os.environ.setdefault("PORT", "Added by developer")
+              os.environ.setdefault("SECRET_KEY", "Added by developer")
+              os.environ.setdefault("MONGO_URI", "Added by developer")
+              os.environ.setdefault("MONGO_DBNAME", "Added by developer")
+
+   
+          
+    #### Heroku Deployment
+
+
+    This project was deployed using Heroku. Heroku is a PAAS (platform as a service) that enables developer to build, run and operate applications entirely in the cloud. Heroku integrates with GitHub to make it easy to deploy code living on GitHub to apps running on Heroku.
+
+    1. In the terminal you must first need to create two files.
+     **pip3 freeze -- local > requirements.txt**
+      Followed by 
+     **echo web: python app.py > Procfile**
+      These are needed for Heroku. 
+    2. Sign in or create a Heroku account. 
+        * Click 'New' on the dashboard and select 'Create new app'.
+        * Provide a unique app name including dashes, select your region, and   click  **'Create App'**.
+
+    3. Go to **delpoy** tab on the dashboard.
+       * For the **deployment method** click **Github**
+       * Provide your repository name and click **Search**, once it finds your repository, click **Connect**.
+       * Click on **Settings** and then the **Reveal Config Vars** to provide your **environment variables** from your **env.py** file to **Heroku**:
+       
+        ENTER IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME.
+
+    4. Return to your git terminal and Push **requirements.txt** and **Profile**.
+        $ git add requirements.txt
+        $ git commit -m "Add requirements.txt file."
+        $ git add Procfile 
+        $ git commit -m "Add procfile."
+        $ git push
+    5.  Return to **Heroku** and click the **deploy** tab. 
+        Then click on **Enable Automatic Deployment** followed by **Deploy Branch (main)**
+        This will take less than a minute. Once your receive the success note. Click **view** to see your live site. 
+    
+
+                            
+## Testing 
+
+### Photo story for first time user
+
+### User Stories Testing 
+
+#### First Time User 
+
+
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Family Recipes on multiple displays."
+
+ * User arrives at site and is guided to register. They must register name and password. They are prompted to add letter and not leave blank. 
+
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/register.png) "Family Recipes register page."
+
+ * After registering the user lands on the profile page and allows user to view recipes or add their own. 
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/profile.png) "Family Recipes profile page."
+
+  * User looks at recipes and searches for valid recipes. Example entering flour will give you different cakes.
+
+ ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/recipes.png) "Family Recipes profile page."
+
+ * This allows them to search.
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/profile.png) "Family Recipes profile page."
+
+  The user can then look at the full recipe and see ingredients listed and whether or not it is gluten free. 
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/fullrecipe.png) "Family Recipes profile page."
+
+  While searching the navbar or return ing to the profile the user can add their own recipe.
+
+  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/addrecipe.png) "Family Recipes profile page."
+
+  The user may fill in the form and add their recipe. They can also use the url image option or use the default image. 
+
+  The user may also delete or edit their own recipes on the full recipe page. Once completed the user may log out.
+
+  All links are working appropriately and leading the user easily around the site. 
+
+
+## Code Testing
+
+
+W3C CSS Validator Services was used to validate CSS.
+
+![successful validation confirmation](static/testing/csstest.png) "CSS Validation."
+ * This was successful.
+
+ ![successful validation confirmation](static/testing/pep8.png) "Pep8 Python testing."
+ * This was successful but there was white space on blank like that would not change.
+
+
+
+![successful validation confirmation](static/testing/htmlval.png) "Home Page HTML success."
+
+![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](static/testing/lighthouse.png) "Lighthouse score for the websites user efficency."
+
+### Bugs
+#### Mongodb
+
+1. The trickiest part is connecting mongodb and to gitpod. The main issue is knowing where to add the name and password to your MONGO_URL. This seemed to have a delayed response for me as it did not initial work but worked the following morning. I use a VPN in China and can cause some glitches. First test didn't work because I had missed a closing " in my html. Once rectified it all worked and stored info in the databases.
+
+#### Images and form
+* After adding a flex component to css this cause my images to distort. I removed the flex to specific areas instead. 
+
+ #### Form 
+ * The form pushed left on small devices. I removed the width of 400px, which helped and then targeted the media query on larger devices. 
+
+ #### Home Page
+ * I had a link to the recipes which allowed the user to bypass login and register. I removed this from the site. 
+
+
+## Acknowledgements
+### Media
+* Code Institute Tutorials for providing a jumping off block. 
+ * Slack for being a great source of help with either googling or when other students have provided suggestions to help improve your work. 
+ * Code Institute Tutorials. 
+
+ ### Individuals
+ * My Mentor, Precious Ijege. 
+ * Tutors at Code Institute are great guiding hand.   They do not give you the answer but ask the right questions to lead you down the correct path. It also helps build confidence. 
+ * Anne Greaves and Code Institute for a comprehensive guide to writing README.md. The template was taken from the Code Institute Guide to writing README and how to write Markdown.
+
+ * Juan Stelling - breaktasty for a thorough README. I used elements of his and Anne Greaves README. 
+
+ * Alex Harvey, a guide to writing a table of contents in gitpod. 
+
+
+#### Code
+  
+
+ [Tim Nelson Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth)
+
+ * This was used as the template for creating and connectimg my own python, mongodb database. 
+
+ * Peer Code for ideas and examples implementation.
+
+ * Lazy Vegan for how to deal with images in the database by  Jenny Malone.
+
+
+ * Juan Stelling and breaktasty the ingredients section how to split the ingrediemts into lines. 
+
+ ### Credits 
+
+ 
+
+ * Parallax template from materialize for home page.
+
