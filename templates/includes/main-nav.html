@@ -17,10 +17,10 @@
                 The Tea Chest
             </a>
             <div class="dropdown-menu border-0 logo-font" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Green</a>
-                <a href="" class="dropdown-item">Read</a>
-                <a href="" class="dropdown-item">Bubble</a>
-                <a href="" class="dropdown-item">All Tea</a>
+                <a href="{% url 'products' %}?category=tea" class="dropdown-item">tea</a>
+                <a href="{% url 'products' %}?category=bubble_tea" class="dropdown-item">Pink</a>
+                <a href="{% url 'products' %}?category=iced_tea" class="dropdown-item">Bubble</a>
+                <a href="{% url 'products' %}?category=tea,bubble_tea,iced_tea" class="dropdown-item">All Tea</a>
             </div>
         </li>
 
@@ -28,9 +28,9 @@
             <a class="font-weight-bold logo-font nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Tea Tasting
             </a>
-            <div class="dropdown-menu border-0 logo-font" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Traditional</a>
-                <a href="" class="dropdown-item">Make your own Bubble Tea</a>
+            <div class="dropdown-menu border-0 logo-font" aria-labelledby="tea-tasting-link">
+                <a href="{% url 'products' %}?category=tea_tasting" class="dropdown-item">Traditional</a>
+                <a href="{% url 'products' %}?category=making_bubble" class="dropdown-item">Make your own Bubble Tea</a>
             </div>
         </li>
 
