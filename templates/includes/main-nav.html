@@ -35,9 +35,13 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link logo-font text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Reviews
+            <a class="font-weight-bold nav-link logo-font text-black" href="{% url 'blog' %}" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Blog 
             </a>
+            <div class="dropdown-menu border-0 logo-font" aria-labelledby="tea-tasting-link">
+                <a href="{% url 'blog' %}" class="dropdown-item">Blogs</a>
+                <a href="{% url 'blog' %}" class="dropdown-item">Latest Blog</a>
+            </div>
         </li>
     </ul>
 </div>
