@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -30,3 +30,16 @@ def posts(request):
         'posts': posts,
     }
     return render(request, 'blog/blogs.html', context)
+
+
+def post_detail(request, slug):
+    """ A View for Each Blog Post. """
+
+    template_name = 'blog/blog_details.html'
+    post = get_object_or_404(Post, slug=slug)
+
+    context = {
+        'post': post,
+    }
+
+    return render(request, 'blog/blog_details.html', context)

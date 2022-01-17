@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Blog Post Content-->
+<section id="blog-post-container">
+    <div class="container my-5">
+        <h2 class="text-center">{{ post.title }}</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="post">
+                    <!-- Post Content -->
+                    <div class="col-lg-12 p-none">
+                        <div class="post-img-container">
+                            {% if post.image %}
+                                <img  class="card-img-blog img-fluid" src="{{ MEDIA_URL }}{{ post.image }}" alt="{{ post.title }}">
+                            {% else %}
+                                <img  class="card-img-blog img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ post.title }}"/>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div>
+                    <!-- Blog Info tags -->
+                    <p class="info mt-3">
+                        <span><i class="fas fa-user"></i> {{ post.author }}</span>
+                        <span><i class="fas fa-calendar-alt"></i> {{ post.created_on }}</span>
+                        
+                    </p>
+                    </div>
+                    <div class="post-page-content">
+                        <p>{{ post.content | safe }}</p>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
