@@ -11,9 +11,8 @@ body {
     background-color: black;
 }
 
-p {
-    display: block flow-root;
-}
+
+
 
 /* from Bulma */
 .icon {
@@ -24,6 +23,7 @@ p {
     width: 1.5rem;
     color: rgb(241, 132, 227);
 }
+
 
 .nav-link {
     color: rgb(241, 132, 227);
@@ -62,11 +62,13 @@ p {
 .card-img-top {
     height: 214px;
     width: 200px;
+    
 }
 
 .card-img-blog {
     height: 400px;
     width: 400px;
+    border-color: rgb(241, 132, 227);
 }
 
 .btn-outline-black {
@@ -310,9 +312,9 @@ input[name='q']::placeholder {
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
+@media (max-width: 700px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 200px;
     }
 
     body {
@@ -321,4 +323,18 @@ input[name='q']::placeholder {
 }
 
 
-}
+
+
+
+
+
+
+
+  
+
+  
+    
+
+
+
+
