@@ -142,7 +142,27 @@
     {% block content %}
     {% endblock %}
 
+    <footer id="main-footer" class="add-padding border-top-color2">
     
+        <div class="container">
+  
+          <p><a href="{% url 'home' %}">
+            <h2 class="logo-font-2 text-center my-3">Tea People <i class="fas fa-seedling"></i></h2>
+        </a></p><br>
+        
+          <ul class="social-links text-center">
+            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+            <li><a href="https://www.wechat.com/" target="_blank"><i class="fa fa-wechat fa-fw"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-fw"></i></a></li>
+          </ul>
+        
+          <p class="text-center text-black logo-font">&copy; 2022 - Michelle Coffey</p>
+        
+        </div>
+        
+      </footer>
 
     {% block postloadjs %}
         <script type="text/javascript">

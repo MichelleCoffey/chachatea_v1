@@ -73,7 +73,7 @@ body {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important; 
     border: 1px solid black;
 }
 
@@ -320,7 +320,81 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+
+    .image-container {
+        
+    }
 }
+
+#main-footer {
+    background: rgb(241, 132, 227);
+}
+
+#main-footer p a {
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+#main-footer p {
+    text-align: center; 
+}
+
+.social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.social-links li{
+    display:inline-block;
+    margin:0 5px;
+    border-radius:3px;
+    box-shadow:0 4px 0 transparent;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+
+.social-links li a {
+    display:block;
+    color:#fff;
+    font-size:21px;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    background:black;
+    border-radius:50%;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+
+.social-links li a:hover {
+    color: black;
+    background:white;
+}
+
+.logo-font-2 {
+    
+    font-family: 'Permanent Marker', cursive;
+    color: black;
+
+}
+
+a {
+    color: white;
+
+}
+
+a:hover {
+
+    color: black;
+    background:white;
+}
+
+
 
 
 
