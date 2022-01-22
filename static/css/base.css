@@ -37,6 +37,7 @@ body {
 
 .delivery-banner {
     background-color: #222 !important;
+    opacity: 1;
 }
 
 .main-logo-link {
@@ -66,9 +67,10 @@ body {
 }
 
 .card-img-blog {
-    height: 400px;
-    width: 400px;
-    border-color: rgb(241, 132, 227);
+    height: 350px;
+    width: 300px;
+    
+   
 }
 
 .btn-outline-black {

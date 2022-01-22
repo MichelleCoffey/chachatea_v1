@@ -36,20 +36,20 @@
                    <div class="content py-5 logo-font" >
                         
                         <!-- Title -->
-                        <a class="text-reset" href="">
+                        <a class="text-reset" href="{% url 'post_detail' post.slug %}">
                             <h2>{{ post.title }}</h2>
                         </a>
                         <!-- Blog Info tags -->
-                        <p class="info">
-                          <span><i class="fas fa-user"></i> {{ post.author|upper }}</span> 
-                          <span><i class="fas fa-calendar-alt"></i> {{ post.created_on }}</span>
+                        <p>
+                          <span><i class="fas fa-feather"></i> {{ post.author|upper }}</span> </p>
+                          <p> <span><i class="fas fa-calendar-check"></i> {{ post.created_on }}</span>
                           
                        </p>
                         <!-- Blog Preview -->
-                        <p class="intro">{{ post.content|truncatechars:180 }}</p>
+                        <p class="intro">{{ post.content|truncatechars:200 }}</p>
                         <!-- Read Post Button --> 
                         <div class="py-5">
-                           <a href="{% url 'post_detail' post.slug %}" class="read">Read Post</a>
+                           <a href="{% url 'post_detail' post.slug %}" class="btn-lg">Read Post</a>
                         </div> 
                    </div>
                 </div>
