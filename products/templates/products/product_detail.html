@@ -97,13 +97,13 @@
         </div>
     </div>
     <!-- Product Reviews-->
-    <div id="product-reviews" class="row bg-light">
-        <div class="col-12 col-md-10 col-lg-4 offset-lg-4 mb-4">
-            <h2 class="text-black font-weight-bold mt-5 mb-4">Product Reviews</h2>
+    <div id="product-reviews" class="product-detail-container row bg-dark p3">
+        <div class="col-12 col-md-10 col-lg-6 offset-lg-3 mb-4">
+            <h2 class="text-white text-center font-weight-bold mt-5 mb-4">Product Reviews</h2>
             {% if request.user.is_authenticated %}
             {% if update %}
                 <!-- Edit Review Form -->
-                <form method="POST" action="{% url 'update_review' review.id %}#reviews">
+                <form method="POST" action="{% url 'update_review' review.id %}#reviews" label="Name">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="text-right">
@@ -121,7 +121,7 @@
                 </form>
             {% endif %}
         {% else %}
-            <p class="small"> Please <a href="{% url 'account_login' %}">Sign In</a> to leave a review.</p>
+            <p class="small text-center"> Please <a href="{% url 'account_login' %}">Sign In</a> to leave a review.</p>
         {% endif %}
     </div>
 </div>
@@ -135,7 +135,7 @@
                     {% if review.user == request.user or request.user.is_superuser %}
                         <div class="card-head text-right">
                             <a class="btn btn-black rounded-0" href="{% url 'update_review' review.id %}#reviews">
-                                Update Review
+                                Edit Review
                             </a>
                         </div>
                     {% endif %}

@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import dj_database_url
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -120,10 +122,14 @@ WSGI_APPLICATION = 'chachatea.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+   'default': {
+           'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+
+DATABASES = {
+    'default': dj_database_url.parse('postgres://kuxkfasdiwwccf:f7530b1610dd3d2c90a0f02600f5e9ce444b91ea5e606fc29848dd5966ddc0c2@ec2-34-242-89-204.eu-west-1.compute.amazonaws.com:5432/d1a7t8ior7nn64')
 }
 
 
