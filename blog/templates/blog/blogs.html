@@ -36,7 +36,7 @@
                    <div class="content py-5 logo-font" >
                         
                         <!-- Title -->
-                        <a class="text-reset" href="{% url 'post_detail' post.slug %}">
+                        <a class="text-reset" href="{% url 'blog_details' post.slug %}">
                             <h2>{{ post.title }}</h2>
                         </a>
                         <!-- Blog Info tags -->
@@ -49,7 +49,7 @@
                         <p class="intro">{{ post.content|truncatechars:200 }}</p>
                         <!-- Read Post Button --> 
                         <div class="py-5">
-                           <a href="{% url 'post_detail' post.slug %}" class="btn-lg">Read Post</a>
+                           <a href="{% url 'blog_details' post.slug %}" class="btn-lg">Read Post</a>
                         </div> 
                    </div>
                 </div>
