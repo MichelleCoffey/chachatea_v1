@@ -1,0 +1,1 @@
+web: gunicorn chachatea_v1.wsgi:application
