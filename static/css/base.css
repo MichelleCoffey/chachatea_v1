@@ -60,6 +60,7 @@ body {
 	z-index: -1;
 }
 
+
 .card-img-top {
     height: 214px;
     width: 200px;
@@ -390,6 +391,10 @@ a:hover {
     background:white;
     text-decoration: none;
     text-shadow: #000;
+}
+
+.blog {
+    background: white;
 }
 
 

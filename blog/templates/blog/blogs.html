@@ -40,13 +40,10 @@
                             <h2>{{ post.title }}</h2>
                         </a>
                         <!-- Blog Info tags -->
-                        <p>
-                          <span><i class="fas fa-feather"></i> {{ post.author|upper }}</span> </p>
-                          <p> <span><i class="fas fa-calendar-check"></i> {{ post.created_on }}</span>
-                          
-                       </p>
+                        <p><span><i class="fas fa-feather"></i> {{ post.author|upper }}</span> </p>
+                        <p> <span><i class="fas fa-calendar-check"></i> {{ post.created_on }}</span></p>
                         <!-- Blog Preview -->
-                        <p class="intro">{{ post.content|truncatechars:200 }}</p>
+                        <p class="intro">{{ post.content|safe|truncatechars:200 }}</p>
                         <!-- Read Post Button --> 
                         <div class="py-5">
                            <a href="{% url 'blog_details' post.slug %}" class="btn-lg">Read Post</a>
@@ -84,6 +81,15 @@
           {% endif %}
         </div>
  </section>
+
+ <script>
+     $(".content p").each(
+         function() {
+             $(this).css("color", "rgb(241, 132, 227)"); 
+             $(this).css("font-family", "Permanent Marker, cursive");
+         }
+     )
+ </script>
 
 {% endblock %}
 
