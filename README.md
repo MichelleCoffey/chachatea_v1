@@ -1,6 +1,6 @@
 # **Tea People**
 [View a live version of Tea People here]()
-This is the main website for *Tea People*. An. eccommerce site selling tea and tea tasting. 
+This is the main website for *Tea People*. An eccommerce site selling tea and tea tasting in Cork. Tea People will introduce you to the wonderful world of tea. From green tea to Bubble tea. Tea People hopes to promote the health benefits of tea and to help those who wish to move away from traditional black tea. 
 ![Tea People on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Tea People on multiple displays"
 
 ## Table of Contents
@@ -48,9 +48,9 @@ This is the main website for *Tea People*. An. eccommerce site selling tea and t
 
 ### Project Goals 
 
- * A website that allows user full CRUD(Create, Read/Locate , Update and Delete) functionality. 
-
- * Site will use HTML, CSS, jQuery, Python, Flask and MongoDB.
+ * An E-commerce website that allows customers to order tea for delivery online. Customers may also log in to write reviews.
+ 
+ * Site will use HTML, CSS, jQuery, Python, Stripe and Django.
 
  * Website will provide Users the chance to login, create and edit website. 
 
@@ -62,39 +62,64 @@ This is the main website for *Tea People*. An. eccommerce site selling tea and t
  
  1. A first time user will be able to visit the site on any device. 
  
- 2. A first time user will register their account.
+ 2. They will be able to learn about the different types of tea. .
+
+ 3. They will be able to easily see the products and click for more information. 
+
+ 4. They can also sort through the products for their preferences. 
+
+ 5. The main navbar will allow to filter by price, category, teea tasting and blogs.
+
+ 6. The user will also be able to add tea to shopping basket and remove. 
+
+ 7. They can register an account to save their shopping history and delivery  details. 
+
+ 8. They can purchase a product with ease using STRIPE.
  
- 3. After registering their account the can then add a recipe, edit a recipe and search for recipes using ingredients. 
+ 
 
  #### Returning Visitor Goals
 
- 1. Will be able to login to their account. 
+ 1. The user will be able to check passed orders. 
+ 2. They will be able to log in and leave a review of their order or product. 
+ 3. They check for new products. 
+ 4. They can check for blog updates. 
 
- 2. They can also search for new recipes, add new recipes and edit old recipes. 
 
  #### Frequent Visitor Goals.
 
- 1. Learn new recipes.
+ 1. Check the blog.
 
- 2. Continue to add to their recipe book. 
+ 2. Update passwords to log in if forgotten. 
 
- 3. Double check recipes when making dinner on your mobile. 
+ 3. Change and update address if different.
+
+ 4. Comment on orders and makee further orders. 
+
+ #### Admin User Goals
+
+ 1. The admin will add, edit and delete products. 
+ 2. The admin will maintain stripe functionality. 
+ 3. The admin will be  able to add, edit and delete blog posts. 
+ 4. The admin will be able to delete and remove any user reviews in comments.
+ 5. The admin will be able to see and manage current users. 
+ 6. The admin will be able to see and manage current orders.
+
 
 # Design 
   ## Color Scheme  
-  * Three main colors where chosen. Black backgrouund on landing page. and White background, black font like a notebook and teal buttons. 
+  * Three main colors where chosen. Black backgrouund on landing page and White background inproduct and main blog post. The colors are also black, white and bright pink rgb(241, 132, 227). These colors are attractive and complement the main hero neon sign picture. This is with thee ideea of making tea cool and moving it from your grandmother's teapot to the variety the exists today. 
   
-  * Red button for deletion warning.
-   
+  * buttons are black, white and pink but also follow Stripe and Allauth styling.  
  ## Typography 
     
   * Font used is Permanent Marker and Cursive for logo and Lato for the main body.  Permanent Marker is a nod to. thee Neon sign on the landing page.
 
  ## Imagery
-  * Images used were from Unsplash.
+  * Images used were from Unsplash. 
   
 ## Features
-* Responsive on all devices. Allows users to work shop for tea online.  Allowing Icons that link to further social media updates.
+* Responsive on all devices. Allows users to shop for tea online.  Allowing Icons that link to further social media updates.
 
 ## Defensive Design
 
@@ -128,29 +153,30 @@ This is the main website for *Tea People*. An. eccommerce site selling tea and t
 * Jquery
 * Python
 ## Frameworks Libraries and Programs Used 
-1. [Materializecss](https://materializecss.com/)
+1. [Boostrap](https://getbootstrap.com/)
   
-    Materialize CSS
+    Bootstrap
 
 2. [Heroku](https://dashboard.heroku.com/apps)
 
     Used to deploy app. 
 
-3. [MongoDB](https://account.mongodb.com/account/login?signedOut=true)
+3. [AWS](https://aws.amazon.com/)
 
-    Database usedto store recipes and site info.  
+    Amazon Wed Services  
 
-4. [Google Fonts](https://fonts.google.com/specimen/Pacifico?preview.text=Pacifico&preview.text_type=custom&query=Pacifico)
+4. [Google Fonts](https://fonts.google.com/specimen/Permanent+Marker)
 
-    Pacifico font used.
+    Permanent markere font used.
+
 5. [Fontawesome](https://fontawesome.com/)
     Fontawesome was used for to get icons for utensils and aa cocktail on the feast page. 
 6. [Gitpod](https://gitpod.io/workspaces/)
     Used gitpod to work on my repositories. 
 7. [Github](https://github.com/MichelleCoffey/A_Moveable_Feast_Shanghai/tree/1a91746d21707106faef91c699500aff9414e097)
      GitHub is hosting my repositories. 
-8. JQuery: 
-    * Used for materialize
+8. [JQuery](https://jquery.com/)
+    * jQuery
 
 9. [Balsamiq](https://balsamiq.com/)
     * Balsamiq was used to design and organise my WireFrames. 
@@ -158,14 +184,17 @@ This is the main website for *Tea People*. An. eccommerce site selling tea and t
      * Tinypng for fomatting images, so they loaded faster.
 11. [Unsplash](https://unsplash.com/)
     * Upsplash was used to access some stock images to add to the site and in particular the hero image and background image. 
-12. [Shutterstock](https://www.shutterstock.com/)
-    * Shutterstock was used for the heroimage. 
-13. [BBC FOOD](https://www.bbc.co.uk/food)
-    * Recipes.
+12. [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/)
 
-14. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+    * Django key generator. 
 
-    Used for security and passwords. 
+13. [Stripe](https://stripe.com/en-gb-us)
+
+    * Stripe for handling purchases.
+
+14. [PostgreSQL](https://www.postgresql.org)
+
+    PostgreSQL for the database.
 
 15. [RandomKeyGen](https://randomkeygen.com/)
 
