@@ -331,31 +331,28 @@ To make a local clone on Github, follow the following steps.
 
 W3C CSS Validator Services was used to validate CSS.
 
-![successful validation confirmation](static/testing/csstest.png) "CSS Validation."
+![successful validation confirmation](/static/testing/cssval.png) "CSS Validation."
  * This was successful.
 
- ![successful validation confirmation](static/testing/pep8.png) "Pep8 Python testing."
+ ![successful validation confirmation](/static/testing/pep8.png) "Pep8 Python testing."
  * This was successful but there was white space on blank like that would not change.
 
 
 
-![successful validation confirmation](static/testing/htmlval.png) "Home Page HTML success."
+![successful validation confirmation](/static/testing/tea_htmlval.png) "Home Page HTML success."
 
-![Lighthouse Performance 77%, Accessibilty 89%, Best Practices 93%, SEO 100% on desktop](static/testing/lighthouse.png) "Lighthouse score for the websites user efficency."
 
 ### Bugs
-#### Mongodb
+#### Summernote
 
-1. The trickiest part is connecting mongodb and to gitpod. The main issue is knowing where to add the name and password to your MONGO_URL. This seemed to have a delayed response for me as it did not initial work but worked the following morning. I use a VPN in China and can cause some glitches. First test didn't work because I had missed a closing " in my html. Once rectified it all worked and stored info in the databases.
+1. When adding the blog I ran into an issue with the color of the font because summernote overrides the font color and my page was black. I fixed this my changing the font color in admin. Also Igor at Code institute helped with code to override this in the blogs page.
 
 #### Images and form
-* After adding a flex component to css this cause my images to distort. I removed the flex to specific areas instead. 
+* After setting up AWS I still issues with some images not loading correctly or too slowly.. 
 
- #### Form 
- * The form pushed left on small devices. I removed the width of 400px, which helped and then targeted the media query on larger devices. 
+ #### Models 
+ * When I initially set up the blog in models I started having a major issue with all my migrations. Thanks to Igor in Tutor support I was able to remove it all migrations and delete the database and then add it all again.. 
 
- #### Home Page
- * I had a link to the recipes which allowed the user to bypass login and register. I removed this from the site. 
 
 
 ## Acknowledgements and Credits
@@ -364,31 +361,43 @@ W3C CSS Validator Services was used to validate CSS.
  * Slack for being a great source of help with either googling or when other students have provided suggestions to help improve your work. 
  * Code Institute Tutorials. 
 
- ### Individuals
+ ### Individuals, Credits and Code
  * My Mentor, Precious Ijege. 
  * Tutors at Code Institute are great guiding hand.   They do not give you the answer but ask the right questions to lead you down the correct path. It also helps build confidence. 
  * Anne Greaves and Code Institute for a comprehensive guide to writing README.md. The template was taken from the Code Institute Guide to writing README and how to write Markdown.
 
- * Juan Stelling - breaktasty for a thorough README. I used elements of his and Anne Greaves README. 
+ * I looked at Perkulater, Fashionista and Rebels Beans, all on peer view in Slack, to help figure out both blogs and Product reviews. 
+
+ * [Codementor](https://www.codementor.io/@jadianes/get-started-with-django-building-recommendation-review-app-du107yb1a)
+
+ * A guide to using reviews in wine products. This heelped to formulate my models for product reviews. 
+
+  [Django Central](https://djangocentral.com/building-a-blog-application-with-django/)
+
+ * A guide to writing a blog and using paginator. 
+
+ * Code Institute video on using Summernote in blogs.
+
+ * Boutique Ado for the stripe functionailty and all other workings in the site.
 
  * Alex Harvey, a guide to writing a table of contents in gitpod. 
 
 
-#### Code
+
   
 
- [Tim Nelson Task Manager](https://github.com/Code-Institute-Solutions/TaskManagerAuth)
+ 
 
- * This was used as the template for creating and connectimg my own python, mongodb database. 
+  
 
- * Peer Code for ideas and examples implementation.
+ 
 
- * Lazy Vegan for how to deal with images in the database by  Jenny Malone.
+ 
 
 
- * Juan Stelling and breaktasty the ingredients section how to split the ingrediemts into lines. 
+ 
 
- ### Credits 
+
 
 
 
