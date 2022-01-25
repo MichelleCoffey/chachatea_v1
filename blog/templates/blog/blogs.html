@@ -44,7 +44,7 @@
                         <p> <span><i class="fas fa-calendar-check"></i> {{ post.created_on }}</span></p>
                         <!-- Blog Preview -->
                         <p class="intro">{{ post.content|safe|truncatechars:200 }}</p>
-                        <!-- Read Post Button --> 
+                        <!-- Button --> 
                         <div class="py-5">
                            <a href="{% url 'blog_details' post.slug %}" class="btn-lg">Read Post</a>
                         </div> 
@@ -57,7 +57,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 justify-content-center pagination">
-                    <!-- Pagination Buttons -->
+                    
                     {% if posts.has_other_pages %}
                     <nav class="page-nav bg-transparent py-3" aria-label="Page navigation conatiner">
                         <ul class="pagination justify-content-center">

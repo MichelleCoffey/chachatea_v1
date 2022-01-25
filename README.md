@@ -1,7 +1,7 @@
 # **Tea People**
 [View a live version of Tea People here]()
 This is the main website for *Tea People*. An eccommerce site selling tea and tea tasting in Cork. Tea People will introduce you to the wonderful world of tea. From green tea to Bubble tea. Tea People hopes to promote the health benefits of tea and to help those who wish to move away from traditional black tea. 
-![Tea People on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Tea People on multiple displays"
+![Tea People on mobile, ipad, ipad pro and desk top.](static/testing/teapeople_multi.png) "Tea People on multiple displays"
 
 ## Table of Contents
 ### [User Experience](#user-experience-(ux))
@@ -217,27 +217,6 @@ To make a local clone on Github, follow the following steps.
 2. Click on the green button with the text “Code”.
 3. Click on “Open with GitHub Desktop” and follow the prompts in the GitHub Desktop Application for instructions.     
 4. For further options and documentation please click [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
-  
-#### Working with the local copy.
-  1. Install all of the requirements. In the terminal window of your IDE type
-
-     **pip3 install -r requirements.txt**
-
-  2. Create a databae in Mongo db. 
-      * Sign up or login. 
-      * Create a cluster and a database. 
-      * Create cluster for family_recipes and in it create a further three collections: user, categories, and recipes. Add string values for each. 
-  3. Create the variables. 
-    * Create a env.py file by typing **touch env.py**
-    * Create a gitignore file and add the env.py to the gitignore to ensure that any passwords are not visible in the github repository. 
-    * Add environment variables in the env.py
-
-            
-              os.environ.setdefault("IP", "Added by developer")
-              os.environ.setdefault("PORT", "Added by developer")
-              os.environ.setdefault("SECRET_KEY", "Added by developer")
-              os.environ.setdefault("MONGO_URI", "Added by developer")
-              os.environ.setdefault("MONGO_DBNAME", "Added by developer")
 
    
           
@@ -348,7 +327,7 @@ W3C CSS Validator Services was used to validate CSS.
  * I had a link to the recipes which allowed the user to bypass login and register. I removed this from the site. 
 
 
-## Acknowledgements
+## Acknowledgements and Credits
 ### Media
 * Code Institute Tutorials for providing a jumping off block. 
  * Slack for being a great source of help with either googling or when other students have provided suggestions to help improve your work. 
@@ -380,7 +359,8 @@ W3C CSS Validator Services was used to validate CSS.
 
  ### Credits 
 
+
+
  
 
- * Parallax template from materialize for home page.
-
+ 
