@@ -1,7 +1,7 @@
 # **Tea People**
-[View a live version of Tea People here]()
-This is the main website for *Tea People*. An eccommerce site selling tea and tea tasting in Cork. Tea People will introduce you to the wonderful world of tea. From green tea to Bubble tea. Tea People hopes to promote the health benefits of tea and to help those who wish to move away from traditional black tea. 
-![Tea People on mobile, ipad, ipad pro and desk top.](static/testing/teapeople_multi.png) "Tea People on multiple displays"
+[View a live version of Tea People here](https://chachatea.herokuapp.com/)
+This is the main website for *Tea People*. An eccommerce site selling tea and tea tasting in Cork. Tea People will introduce you to the wonderful world of tea. From green tea to Bubble tea. Tea People hopes to promote the health benefits of tea and to help those who wish to move away from traditional black tea and experiment tea from many different countries. 
+![Tea People on mobile, ipad, ipad pro and desk top.](/static/testing/teapeople_multi.png) "Tea People on multiple displays"
 
 ## Table of Contents
 ### [User Experience](#user-experience-(ux))
@@ -48,7 +48,7 @@ This is the main website for *Tea People*. An eccommerce site selling tea and te
 
 ### Project Goals 
 
- * An E-commerce website that allows customers to order tea for delivery online. Customers may also log in to write reviews.
+ * An E-commerce website that allows customers to order tea for delivery online. Customers may also log in to write reviews. A site that is vibrant and attractive. It engages the user. it is is easy to navigate and allows a smooth sales process. 
  
  * Site will use HTML, CSS, jQuery, Python, Stripe and Django.
 
@@ -62,7 +62,7 @@ This is the main website for *Tea People*. An eccommerce site selling tea and te
  
  1. A first time user will be able to visit the site on any device. 
  
- 2. They will be able to learn about the different types of tea. .
+ 2. They will be able to learn about the different types of tea.
 
  3. They will be able to easily see the products and click for more information. 
 
