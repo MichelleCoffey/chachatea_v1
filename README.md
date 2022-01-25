@@ -68,7 +68,7 @@ This is the main website for *Tea People*. An eccommerce site selling tea and te
 
  4. They can also sort through the products for their preferences. 
 
- 5. The main navbar will allow to filter by price, category, teea tasting and blogs.
+ 5. The main navbar will allow to filter by price, category, tea tasting and blogs.
 
  6. The user will also be able to add tea to shopping basket and remove. 
 
@@ -110,7 +110,9 @@ This is the main website for *Tea People*. An eccommerce site selling tea and te
   ## Color Scheme  
   * Three main colors where chosen. Black backgrouund on landing page and White background inproduct and main blog post. The colors are also black, white and bright pink rgb(241, 132, 227). These colors are attractive and complement the main hero neon sign picture. This is with thee ideea of making tea cool and moving it from your grandmother's teapot to the variety the exists today. 
   
-  * buttons are black, white and pink but also follow Stripe and Allauth styling.  
+  * buttons are black, white and pink but also follow Stripe and Allauth styling. 
+  * icons invert colors when hovered over.
+
  ## Typography 
     
   * Font used is Permanent Marker and Cursive for logo and Lato for the main body.  Permanent Marker is a nod to. thee Neon sign on the landing page.
@@ -123,15 +125,15 @@ This is the main website for *Tea People*. An eccommerce site selling tea and te
 
 ## Defensive Design
 
-* The user must log in or register to see the full recipes. 
+* The user must log in or register shop and to leave a review of the tea.
 
-* Passwords are used with WerkZeug to protect the user. 
+* Stripe is used for all payments and log in funtionality. 
 
-* You can only add, edit and delete your own recipes. 
+* You can only add, edit and delete your own review. 
 
 * The passsword must contain between 5-20 characters. 
 
-* Recipes must also contain characters. 
+* You can only log in with one email address. 
 
 * Image Url must contain http:// or https://.
 
@@ -143,7 +145,7 @@ This is the main website for *Tea People*. An eccommerce site selling tea and te
 
 ## Wireframes
 
-* Wireframe for the whole project. [View]()
+* Wireframe for the whole project. [Wireframes](/static/testing/teapeoeple.pdf)
 
 
 # Technologies Used 
@@ -152,6 +154,7 @@ This is the main website for *Tea People*. An eccommerce site selling tea and te
 * CSS
 * Jquery
 * Python
+
 ## Frameworks Libraries and Programs Used 
 1. [Boostrap](https://getbootstrap.com/)
   
@@ -205,9 +208,10 @@ This is the main website for *Tea People*. An eccommerce site selling tea and te
 ### Requirements 
   1. Python3 
   2. Github account
-  3. Mongo db account
-  4. Flask 
+  3. Django
+  4. Summernote
   5. heroku account
+
 
 
 #### The repository is hosted on GitHub but deployed on Heroku
@@ -239,7 +243,9 @@ To make a local clone on Github, follow the following steps.
        * Provide your repository name and click **Search**, once it finds your repository, click **Connect**.
        * Click on **Settings** and then the **Reveal Config Vars** to provide your **environment variables** from your **env.py** file to **Heroku**:
        
-        ENTER IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME.
+       Heroku Config Vars for the whole project. [Heroku Config Vars](/static/testing/heroku_config.png)
+    
+
 
     4. Return to your git terminal and Push **requirements.txt** and **Profile**.
         $ git add requirements.txt
@@ -262,37 +268,62 @@ To make a local clone on Github, follow the following steps.
 #### First Time User 
 
 
- ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/homepage.png) "Family Recipes on multiple displays."
+ ![Tea People homepage on mobile, ipad, ipad pro and desk top.](/static/testing/teapeople_multi.png) "Tea People on multiple displays."
 
  * User arrives at site and is guided to register. They must register name and password. They are prompted to add letter and not leave blank. 
 
- ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/register.png) "Family Recipes register page."
+ ![Tea People Sign Up.](/static/testing/tea_sign_up.png) "Tea People register page."
 
- * After registering the user lands on the profile page and allows user to view recipes or add their own. 
+ * After registering  for the first time the user is prompted to confirm their email before they can log in.
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/profile.png) "Family Recipes profile page."
+  ![Verify log in .](/static/testing/tea_verify.png) "Family Recipes profile page."
 
-  * User looks at recipes and searches for valid recipes. Example entering flour will give you different cakes.
+  * User must then log in with their confirmed log in and password.
 
- ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/recipes.png) "Family Recipes profile page."
+  ![log in.](/static/testing/tea_login.png) "Tea login page."
 
- * This allows them to search.
+  * User then logs into their account for the first time.
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/profile.png) "Family Recipes profile page."
+ ![Products Page.](/static/testing/tea_products.png) "Tea Products page."
 
-  The user can then look at the full recipe and see ingredients listed and whether or not it is gluten free. 
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/fullrecipe.png) "Family Recipes profile page."
+ * User will scroll through products until they find what they want.
 
-  While searching the navbar or return ing to the profile the user can add their own recipe.
+  ![Product Detail Page.](/static/testing/tea_products.png) "Product detail page."
 
-  ![Family Recipes homepage on mobile, ipad, ipad pro and desk top.](static/testing/addrecipe.png) "Family Recipes profile page."
+  The user can then look at a description of the full page and decide if they wish to add it to their cart. 
 
-  The user may fill in the form and add their recipe. They can also use the url image option or use the default image. 
+  ![Add Tea to Cart.](/static/testing/tea_addteatocart.png) "Add Tea to Cart."
 
-  The user may also delete or edit their own recipes on the full recipe page. Once completed the user may log out.
+  * After the shopper has added to the cart, they can then proceed to the checkout.
 
-  All links are working appropriately and leading the user easily around the site. 
+  ![Tea Checkout.](/static/testing/tea_subtotal.png) "Tea Checkout"
+
+  * The shopper then checksout using stripe. 
+
+  * In this case we are fake shopping so used the stripe assigned card to verify a sale.
+
+  * 4242 4242 4242 4242 Stripe Testing card.
+
+  ![Tea Blogs.](/static/testing/tea_blogs.png) "Tea Blogs"
+
+  * The user can also look at the Blogs landing page to check out the blogs available on the site. 
+
+  ![Tea Blog Details.](/static/testing/tea_blogdetails.png) "Tea Blog Details"
+
+  * Full blog available to read. 
+
+  ![Tea Product Reviews.](/static/testing/tea_reviewform.png) "Tea Review"
+
+  ![Pink Tea Product Review.](/static/testing/tea_reviewform.png) "Tea Review"
+ 
+ * User is invited to leave a review of the tea if logged in. They can also edit or remove review. Reviews are available on the product page if not signed in. 
+
+ ![Tea People Sign Out](/static/testing/tea_signout_success.png) "Signout"
+ ![Tea People Sign Out](/static/testing/tea_signout_success.png) "Signout Success"
+
+ * User can then log out when leaving the site.
+ 
 
 
 ## Code Testing
